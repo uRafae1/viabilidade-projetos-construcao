@@ -1,20 +1,22 @@
 """Geradores de variáveis aleatórias sem bibliotecas de distribuições prontas.
 
-Usa apenas o gerador uniforme pseudoaleatório do módulo padrão `random`.
+Uniforme: congruencial linear da aula, sem usar `random`.
 Normal: Box-Muller. LogNormal: transformação da Normal. PERT: Beta por
-aceitação-rejeição com parâmetros alpha/beta clássicos da PERT.
+razão de Gammas (Marsaglia-Tsang), com parâmetros clássicos da PERT.
 """
 import math
-import random
 
 
 class GeradorAleatorio:
-    def __init__(self, seed=None):
-        self.rng = random.Random(seed)
+    def __init__(self, seed=42):
+        if not isinstance(seed, int) or isinstance(seed, bool) or not 0 < seed < 2147483647:
+            raise ValueError("A semente deve ser um inteiro entre 1 e 2147483646.")
+        self.estado = seed
 
     def uniforme(self):
-        # Evita exatamente 0 e 1, necessários para logaritmos e inversão.
-        return self.rng.random()
+        # Nunca retorna 0 ou 1: evita log(0) no Box-Muller e na Gamma.
+        self.estado = (16807 * self.estado) % 2147483647
+        return self.estado / 2147483647
 
     def bernoulli(self, p):
         if not 0 <= p <= 1:
@@ -46,7 +48,10 @@ class GeradorAleatorio:
         """Amostra Beta(alpha,beta) via relação Gamma, usando Marsaglia-Tsang."""
         if alpha <= 0 or beta <= 0:
             raise ValueError("Parâmetros da Beta devem ser positivos.")
-        return self._gamma(alpha) / (self._gamma(alpha) + self._gamma(beta))
+        x = self._gamma(alpha)
+        y = self._gamma(beta)
+        # O MESMO x precisa aparecer no numerador e no denominador.
+        return x / (x + y)
 
     def _gamma(self, shape):
         """Amostragem Gamma para shape > 0, método Marsaglia-Tsang."""
@@ -70,6 +75,8 @@ class GeradorAleatorio:
     def pert(self, otimista, mais_provavel, pessimista, lamb=4.0):
         """PERT clássica: Beta(alpha,beta) escalada para [otimista,pessimista]."""
         o, m, p = otimista, mais_provavel, pessimista
+        if not math.isfinite(lamb) or lamb < 0:
+            raise ValueError("O peso da PERT deve ser finito e não negativo.")
         if not (o <= m <= p):
             raise ValueError(f"PERT exige otimista <= moda <= pessimista: {(o,m,p)}")
         if o == p:

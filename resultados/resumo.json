@@ -1,0 +1,259 @@
+[
+  {
+    "cenario": "Cenário 1 — Edifício residencial",
+    "n": 100000,
+    "semente": 42,
+    "preco_contrato": 19000000,
+    "prazo_contrato_dias": 360,
+    "probabilidade_prejuizo": 0.08169,
+    "probabilidade_prejuizo_pct": 8.169,
+    "probabilidade_atraso_pct": 56.208999999999996,
+    "multa_media_condicional_atraso": 57243.442313117295,
+    "custo_medio_total": 17786125.982589904,
+    "duracao_media_dias": 364.1651044948612,
+    "lucro_medio": 1213874.0174100958,
+    "custo_medio_sem_multa": 17753950.016100124,
+    "multa_media_geral": 32175.9664897801,
+    "rodadas_com_prejuizo": 8169,
+    "rodadas_com_atraso": 56209,
+    "limite_prejuizo_pct": 30.0,
+    "limite_multa_media": 200000,
+    "atende_criterio_prejuizo": true,
+    "atende_criterio_multa": true,
+    "recomendacao": "ACEITAR",
+    "custo": {
+      "media": 17786125.982589904,
+      "mediana": 17766808.40862749,
+      "minimo": 14482561.03192635,
+      "maximo": 22582912.07629511,
+      "desvio_padrao": 860214.5482255602,
+      "p90": 18898410.82546979
+    },
+    "duracao": {
+      "media": 364.16510449486117,
+      "mediana": 363.33921606346246,
+      "minimo": 295.7677332262637,
+      "maximo": 457.3406252926307,
+      "desvio_padrao": 21.314026542840253,
+      "p90": 392.2284658367716
+    },
+    "hist_custo": {
+      "inicio": 14000000,
+      "largura": 1000000,
+      "contagens": [
+        30,
+        1513,
+        16502,
+        42770,
+        31016,
+        7433,
+        713,
+        22,
+        1
+      ],
+      "frequencias": [
+        0.0003,
+        0.01513,
+        0.16502,
+        0.4277,
+        0.31016,
+        0.07433,
+        0.00713,
+        0.00022,
+        1e-05
+      ]
+    },
+    "hist_duracao": {
+      "inicio": 280,
+      "largura": 20,
+      "contagens": [
+        9,
+        1136,
+        11647,
+        30999,
+        33554,
+        17290,
+        4691,
+        651,
+        23
+      ],
+      "frequencias": [
+        9e-05,
+        0.01136,
+        0.11647,
+        0.30999,
+        0.33554,
+        0.1729,
+        0.04691,
+        0.00651,
+        0.00023
+      ]
+    }
+  },
+  {
+    "cenario": "Cenário 2 — Galpão logístico",
+    "n": 100000,
+    "semente": 43,
+    "preco_contrato": 4300000,
+    "prazo_contrato_dias": 150,
+    "probabilidade_prejuizo": 0.78497,
+    "probabilidade_prejuizo_pct": 78.497,
+    "probabilidade_atraso_pct": 0.0,
+    "multa_media_condicional_atraso": null,
+    "custo_medio_total": 4538555.976623141,
+    "duracao_media_dias": 91.0459936848433,
+    "lucro_medio": -238555.9766231407,
+    "custo_medio_sem_multa": 4538555.976623141,
+    "multa_media_geral": 0.0,
+    "rodadas_com_prejuizo": 78497,
+    "rodadas_com_atraso": 0,
+    "limite_prejuizo_pct": 25.0,
+    "limite_multa_media": null,
+    "atende_criterio_prejuizo": false,
+    "atende_criterio_multa": null,
+    "recomendacao": "RECUSAR",
+    "custo": {
+      "media": 4538555.97662314,
+      "mediana": 4528622.62168969,
+      "minimo": 3376403.010352704,
+      "maximo": 6085249.814576394,
+      "desvio_padrao": 299775.3802779544,
+      "p90": 4927247.369601418
+    },
+    "duracao": {
+      "media": 91.0459936848433,
+      "mediana": 90.67636893989845,
+      "minimo": 73.03130225832243,
+      "maximo": 117.14997588521193,
+      "desvio_padrao": 5.549961462104615,
+      "p90": 98.29339800409146
+    },
+    "hist_custo": {
+      "inicio": 3200000,
+      "largura": 400000,
+      "contagens": [
+        29,
+        3016,
+        30018,
+        48075,
+        17032,
+        1769,
+        60,
+        1
+      ],
+      "frequencias": [
+        0.00029,
+        0.03016,
+        0.30018,
+        0.48075,
+        0.17032,
+        0.01769,
+        0.0006,
+        1e-05
+      ]
+    },
+    "hist_duracao": {
+      "inicio": 70,
+      "largura": 10,
+      "contagens": [
+        1210,
+        43627,
+        48867,
+        6099,
+        197
+      ],
+      "frequencias": [
+        0.0121,
+        0.43627,
+        0.48867,
+        0.06099,
+        0.00197
+      ]
+    }
+  },
+  {
+    "cenario": "Cenário 3 — Centro de saúde",
+    "n": 100000,
+    "semente": 44,
+    "preco_contrato": 12500000,
+    "prazo_contrato_dias": 300,
+    "probabilidade_prejuizo": 0.28746,
+    "probabilidade_prejuizo_pct": 28.746,
+    "probabilidade_atraso_pct": 11.199,
+    "multa_media_condicional_atraso": 43436.82973349785,
+    "custo_medio_total": 12122597.860338448,
+    "duracao_media_dias": 273.60977882599656,
+    "lucro_medio": 377402.1396615529,
+    "custo_medio_sem_multa": 12117733.369776592,
+    "multa_media_geral": 4864.4905618544235,
+    "rodadas_com_prejuizo": 28746,
+    "rodadas_com_atraso": 11199,
+    "limite_prejuizo_pct": 15.0,
+    "limite_multa_media": 50000,
+    "atende_criterio_prejuizo": false,
+    "atende_criterio_multa": true,
+    "recomendacao": "RECUSAR",
+    "custo": {
+      "media": 12122597.860338448,
+      "mediana": 12091976.24217239,
+      "minimo": 9300871.419800166,
+      "maximo": 15715604.0152496,
+      "desvio_padrao": 703409.6106835253,
+      "p90": 13049867.782230364
+    },
+    "duracao": {
+      "media": 273.60977882599656,
+      "mediana": 271.9065316827425,
+      "minimo": 214.61249898381254,
+      "maximo": 358.9165220074199,
+      "desvio_padrao": 20.343726527133626,
+      "p90": 301.51196364068113
+    },
+    "hist_custo": {
+      "inicio": 9000000,
+      "largura": 1000000,
+      "contagens": [
+        34,
+        4685,
+        40053,
+        44034,
+        10615,
+        575,
+        4
+      ],
+      "frequencias": [
+        0.00034,
+        0.04685,
+        0.40053,
+        0.44034,
+        0.10615,
+        0.00575,
+        4e-05
+      ]
+    },
+    "hist_duracao": {
+      "inicio": 200,
+      "largura": 20,
+      "contagens": [
+        14,
+        3223,
+        23812,
+        37566,
+        24186,
+        9473,
+        1643,
+        83
+      ],
+      "frequencias": [
+        0.00014,
+        0.03223,
+        0.23812,
+        0.37566,
+        0.24186,
+        0.09473,
+        0.01643,
+        0.00083
+      ]
+    }
+  }
+]
