@@ -43,8 +43,10 @@ Marsaglia–Tsang, a soma sequencial das fases e os eventos de risco.
 As decisões continuam: aceitar o edifício; recusar galpão e centro de saúde nas
 condições atuais. Os números e gráficos dos materiais do Google foram atualizados
 para corresponder a este repositório. A explicação da PERT agora acompanha o
-método Gamma/Beta preservado do colega. O código anterior fora deste repositório
-foi mantido apenas como referência; não misturar seus resultados com esta entrega.
+método Gamma/Beta preservado do colega. O código anterior fora deste repositório,
+seus resultados e cache foram retirados da pasta do trabalho a pedido do grupo,
+com uma cópia de recuperação fora do projeto. Este repositório é a
+única versão para execução e entrega; o ponto de entrada é `main.py`.
 
 Não foram alterados os contratos nem as probabilidades para favorecer decisões.
 A interpretação monetária dos parâmetros da Lognormal continua explícita no README
